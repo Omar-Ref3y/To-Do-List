@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "poppins",sans-serif;
+    text-align: center;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-transform: uppercase;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    font-family: "poppins",sans-serif;
+    z-index: 1;
+    color: #fff;
+}
+header h1{
+padding-inline: 1rem;
+font-weight: 600;
+}
+header h1 span {
+    font-family: "Bungee Tint", sans-serif;
+}
+header img{
+    height: 3rem;
+}
+.container
+{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg,rgb(37, 177, 37),#610f61);
+    padding: 1rem;
+}
+.todo-app{
+    background-color: #fff;
+    width: 100%;
+    max-width:33rem ;
+    padding: 3rem 2rem 5rem;
+    border-radius: 1rem;
+    margin: 10rem auto;
+}
+.todo-app h2{
+    display: flex;
+    font-size: 2rem;
+    color:rgb(37, 177, 37) ;
+    letter-spacing: .1rem;
+    align-items: center;
+    font-weight: 800;
+}
+.todo-app h2 img{
+    height: 2rem;
+    margin-left: .5rem;
+}
+.row{
+    display: flex;
+    width: 100%;
+    padding: 2rem 0;
+    justify-content: space-between;
+}
+.row input{
+    margin-right: 1rem;
+    font-size: 1.3rem;
+    border-radius:1rem ;
+    width: 0%;
+    padding: 0%;
+    transition: all 1s ease;
+
+}
+.row .search-active{
+        border: .1rem solid greenyellow;
+        width: 100%;
+        padding: 1rem 2rem;
+        transition: all 1s ease;
+    
+}
+button {
+    padding: 1rem 1.2rem;
+    border-radius: .4rem;display: flex;
+    align-items: center;
+    gap: .3rem;
+    background-color: greenyellow;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+button img{
+    height: 1rem;
+    transition: rotate 1s ease;
+}
+button:hover img{
+    rotate: 360deg;
+}
+ul li span{
+    height: 2rem;
+
+}
+ul li span img{
+    height: 2rem;
+    transition: all 1s ease;
+    border-radius: 50%;
+
+}
+ul li span:hover img{
+    rotate: 360deg;
+    background-color: rgba(255, 0, 0, 0.274);
+}
+ul li{
+    list-style: none;
+    font-size: 1.2rem;
+    text-align: left;
+    padding: .8rem 3rem ;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li::before{
+    content: "";
+    background: url("https://cdn2.iconfinder.com/data/icons/interface-vol-3-1/16/radio-button-off-unchecked-round-circle-256.png");
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    left: 0;
+    top: 12px;
+    border-radius:50% ;
+    background-size: cover;
+    background-position: center;
+}
+ul li.checked{
+    color: #6d6d6d;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background:url("https://cdn1.iconfinder.com/data/icons/web-interface-part-2/32/square-checkmark-512.png");
+    background-size: cover;
+    background-position: center;
+}
+.alert{
+    text-align: left;
+    color: red;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    display: none;
+}
