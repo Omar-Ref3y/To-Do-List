@@ -23,11 +23,12 @@ function addTask() {
             addBox.classList.remove("search-active")
             alertP.style.display="none"
             addBox.value=""
-            
+            addBox.blur()
             saveData()
         }
     }else{
         addBox.classList.add("search-active")
+        addBox.focus()
     }
 }
 function saveData() {
