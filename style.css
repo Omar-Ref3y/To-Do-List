@@ -172,3 +172,11 @@ ul li.checked::before{
     text-transform: capitalize;
     display: none;
 }
+.message{
+    color: rgb(46, 161, 46);
+    font-weight: 600;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+}
