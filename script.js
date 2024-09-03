@@ -71,16 +71,15 @@ addBox.addEventListener("keydown", (event) => {
 containerTask.addEventListener("click", (ele) => {
     if (ele.target.tagName === "LI") {
         ele.target.classList.toggle("checked")
-        checkClass()
+        checkClass(ele)
         saveData()
     } else if (ele.target.tagName === "IMG") {
         ele.target.parentElement.parentElement.remove();
         saveData()
     }
 }, false)
-function checkClass() {
-    let liEl = document.querySelector("li")
-    if (liEl.classList.contains('checked')) {
+function checkClass(ele) {
+    if (ele.target.classList.contains('checked')) {
         msgEle.textContent=compliments[Math.floor(Math.random()*compliments.length)]
         setTimeout(()=>{
             msgEle.textContent=""
